@@ -1,0 +1,23 @@
+sudo: false
+language: node_js
+node_js:
+- '0.10'
+cache:
+  directories:
+  - node_modules
+notifications:
+  email: false
+before_deploy:
+- npm config set spin false --global
+deploy:
+  provider: npm
+  email: npm@tlvince.com
+  skip_cleanup: true
+  on:
+    branch: master
+    repo: tlvince/ls-cordova-plugins
+  api_key:
+    secure: yermG/Bnira3O21dMu3+ykOSfpeJkoDDtFkpVipK5hExDtXojGofxqHgL7nkRjN+eT7uBg0hmiF6f+UA/gsK4tbKL6ZU9Q49Y4y1+06rS4uGkAmxbP8wS9ayb5C/dwT7fpWbooqh4DShKkGeboOjIvQMUa8nIDkN7E91UB0/j8VVbsh7p/bLZTpGLzD8kmtlGDx+GfCVuZwpN5IAUzaID0qGXD+nViape88xpilwiRHd7I0Knx9vJBS7QOISVD2WijvoCov/KSiMn47ISGwAkC8cMOLrqwLh+EQw4gxndmDELgvR1Y5AFpMI9F120ENmMnC+KfeTY2RtTXsV8YsmAOc0Pcqo/QsNKcaT8UnKoF2Xm0gqBoXjDEdrFJL6s/YC7Uk48UaQVPOEuyoXiDOSz1cIRAOwx5jm3d9wgg5DgFRdA/NH1cdzSdXUFYgOMuwR+JXogwO8rwpc31Lc5fyzzWatxIy4YJg4gAgesCkorbidsSCtlHSkUM/EhxenhYUF0jE+RZwyrh0+pshDc136m9Omlt1dTy3jCDOhaJav2HvBA4L0GvIZr7SrWOBjJt6PfOfhrBAqFh3ZB/WotFBFm96+R02qc5hM3NGJ/D2pbDn48PPGC+uTAYtd8/XfjQTGO1IKMbUgvLFJeoZtWI2Q/QlYleld0g+B3CZWmfADPyA=
+env:
+  global:
+    secure: CUx+VtP0KNwnIb9XXvDscegSHMz09oscY4M94M0OkeGbzBCs76uQ4RFQS/9KIh8w/KNLvcPSE+dIGaqeR224ztIfLEnIBlIMxBn7tB0fkkKyo2quddg6M+J3Bz5oefqKvrcP0fredQJcoZA0y26g4wxkkcsLfc7WuiEMOwNtn80A0GbWP9NQ5PYipxkLCvs+FSxLE5tg5WXhZx1gWWHWxsNV/yF7RYLGXMBWlbDuThiZuHX8S9Y2ptFAo7jvOSFo9MiWAzDs5YUWt9HbU26fn9LHN0aTe90Q5q5Dmd0WrkN4EvvLy/puTvpeLiXmRnvLEX3eTCgDZZyOryb/A93sR/aQka+cWQ6Gj9NkAu6cNsKV1/bFrsb5v/jIU8IezOlVoQ8vGDFcnshQdB6vGRJyhHux7ARvCa+FK+dr+gtfTzOeVhzfkbH5TAc0u/1G2qnjsZHu+V/Zde/Rs95GzuACo9kk/z1BMWv7g1A6f7GNoTbUR2YsTq8oEA3YDF3ZrX0xixvmYRM2imzU5AY9751tMIAxrJmDGJssO8gajPTvqjdk+X2Ct4PG2RXWQNKBVy9PD2c1lH9bMCnF2zkpORcYBk3Aro9Y+ok7Jv4TQETjlQdRag6ppx+9sjlwmYQsswBrDwTP58IzxlE/InjMWmVIP+plul3W5pfTNZWRzQrCuZ8=
