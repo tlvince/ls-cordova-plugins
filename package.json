@@ -20,7 +20,7 @@
     "semantic-release": "^3.3.1"
   },
   "dependencies": {
-    "semantic-release": "^3.3.1"
+    "packpath": "^0.1.0"
   },
   "repository": {
     "type": "git",

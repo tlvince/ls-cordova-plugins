@@ -2,10 +2,8 @@
 /*eslint-env node */
 'use strict';
 
-var path = require('path');
-var pkg = path.resolve('package.json');
-
-pkg = require(pkg);
+var pjd = require('package-json-discover');
+var pkg = pjd.load(process.cwd());
 
 var prefix = process.argv[2] || '';
 var cordovaPlugin = 'cordova-plugin-';
